@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e3520f8f0277eff4784bd5321f16c581",
+    "hash": "8fde9e0a1e5c545ff30c422e50874e56",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -964,6 +964,75 @@
             "time": "2013-04-26 18:42:52"
         },
         {
+            "name": "jhaskell/buttinski-framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jhaskell/buttinski-framework.git",
+                "reference": "7bba7505dfedd382e5158857ce6c6408c75aafe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jhaskell/buttinski-framework/zipball/7bba7505dfedd382e5158857ce6c6408c75aafe6",
+                "reference": "7bba7505dfedd382e5158857ce6c6408c75aafe6",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/data-fixtures": "~1.0.0",
+                "doctrine/doctrine-bundle": "1.2.*",
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+                "doctrine/orm": ">=2.2.3,<2.4-dev",
+                "incenteev/composer-parameter-handler": "~2.0",
+                "php": ">=5.3.3",
+                "sensio/distribution-bundle": "2.3.*",
+                "sensio/framework-extra-bundle": "2.3.*",
+                "sensio/generator-bundle": "2.3.*",
+                "symfony/assetic-bundle": "2.3.*",
+                "symfony/monolog-bundle": "2.3.*",
+                "symfony/symfony": "2.3.*",
+                "twig/extensions": "1.0.*"
+            },
+            "type": "project",
+            "extra": {
+                "symfony-app-dir": "app",
+                "symfony-web-dir": "web",
+                "incenteev-parameters": {
+                    "file": "app/config/parameters.yml"
+                },
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+                ],
+                "post-update-cmd": [
+                    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+                ]
+            },
+            "description": "GBS Framework -- contains common gbs classes for maximum fives",
+            "support": {
+                "source": "https://github.com/jhaskell/buttinski-framework/tree/master",
+                "issues": "https://github.com/jhaskell/buttinski-framework/issues"
+            },
+            "time": "2013-09-08 22:28:38"
+        },
+        {
             "name": "kriswallsmith/assetic",
             "version": "v1.1.2",
             "source": {
@@ -1657,7 +1726,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "doctrine/mongodb-odm": 20,
-        "doctrine/mongodb-odm-bundle": 20
+        "doctrine/mongodb-odm-bundle": 20,
+        "jhaskell/buttinski-framework": 20
     },
     "platform": {
         "php": ">=5.3.3"

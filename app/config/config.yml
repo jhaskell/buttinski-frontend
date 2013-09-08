@@ -39,14 +39,3 @@ assetic:
         #yui_css:
         #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
 
-# Doctrine Configuration
-doctrine_mongodb:
-    connections:
-        default:
-            server:         %mongodb_server%
-            options:        {}
-    default_database:       %mongodb_database%
-    document_managers:
-        default:
-            auto_mapping:   true
-

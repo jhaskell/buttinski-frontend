@@ -39,3 +39,7 @@ assetic:
         #yui_css:
         #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
 
+fos_user:
+    db_driver:      mongodb
+    firewall_name:  main
+    user_class:     GBS\EntityBundle\Document\User

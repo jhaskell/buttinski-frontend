@@ -43,3 +43,15 @@ fos_user:
     db_driver:      mongodb
     firewall_name:  main
     user_class:     GBS\EntityBundle\Document\User
+
+# Doctrine Configuration
+doctrine_mongodb:
+    connections:
+        default:
+            server:         %mongodb_server%
+            options:        {}
+    default_database:       %mongodb_database%
+    document_managers:
+        default:
+            auto_mapping:   true
+

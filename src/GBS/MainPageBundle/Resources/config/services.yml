@@ -1,0 +1,7 @@
+parameters:
+#    gbs_main_page.example.class: GBS\MainPageBundle\Example
+
+services:
+#    gbs_main_page.example:
+#        class: %gbs_main_page.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

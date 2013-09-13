@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Bmatzner\FoundationBundle\BmatznerFoundationBundle(),
             new Bmatzner\ZeptoBundle\BmatznerZeptoBundle(),
             new GBS\EntityBundle\GBSEntityBundle(),
+            new GBS\MainPageBundle\GBSMainPageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -12,7 +12,8 @@ use Symfony\Component\Debug\Debug;
 
 $cidr = '192.168.0.0/16';
 list($net, $mask) = explode('/', $cidr);
-if ((ip2long($_SERVER['REMOTE_ADDR']) & ~((1 << (32 - $mask)) - 1)) != ip2long($net)) {
+$ip = $_SERVER['REMOTE_ADDR'];
+if ($ip != '127.0.0.1' && (ip2long($ip) & ~((1 << (32 - $mask)) - 1)) != ip2long($net)) {
     header('HTTP/1.0 403 Forbidden');
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }

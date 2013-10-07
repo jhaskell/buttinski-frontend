@@ -3,7 +3,10 @@
     "type": "project",
     "description": "GBS Frontend",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { 
+            "": "src/",
+            "GBS\\Behat\\Context\\FeatureContext": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
@@ -24,6 +27,18 @@
         "bmatzner/zepto-bundle": "1.0",
         "bmatzner/foundation-bundle": "4.2.2",
         "jhaskell/buttinski-framework": "dev-master"
+    },
+    "require-dev": {
+        "behat/behat": "~2.5.0",
+        "behat/symfony2-extension": "~1.1.0",
+        "sanpi/behatch-contexts": "1.2.*",
+        "behat/mink-selenium2-driver": "*",
+        "phpunit/phpunit": "3.7.*",
+        "phake/phake": "@alpha",
+        "behat/mink-extension": "1.2.0",
+        "behat/mink-browserkit-driver": "*",
+        "behat/mink-goutte-driver": "*",
+        "fabpot/goutte": "dev-master as 1.0.3"
     },
     "scripts": {
         "post-install-cmd": [

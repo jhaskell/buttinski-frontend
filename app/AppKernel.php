@@ -20,8 +20,10 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Bmatzner\FoundationBundle\BmatznerFoundationBundle(),
             new Bmatzner\ZeptoBundle\BmatznerZeptoBundle(),
-            new GBS\EntityBundle\GBSEntityBundle(),
             new GBS\MainPageBundle\GBSMainPageBundle(),
+            new GBS\DocumentBundle\GBSDocumentBundle(),
+            new GBS\EveAPIBundle\GBSEveAPIBundle(),
+            new GBS\LocationBundle\GBSLocationBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
